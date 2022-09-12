@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main ()
+int main ()                                 //3D array
 {
 	int a[5][5][5],i,j,k;
     for(k=0;k<3;k++)

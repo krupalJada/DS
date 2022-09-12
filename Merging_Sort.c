@@ -5,7 +5,7 @@ void Output(int arr[])
 {
     for (int j = 0; j < 15; j++)
     {
-        printf("\n %d = %d",j,arr[j]);
+        printf(" %d",arr[j]);
     }
 }
 void Merge(int A[],int low,int mid,int high)
@@ -20,11 +20,10 @@ void Merge(int A[],int low,int mid,int high)
     }
     while(i<=mid)
         B[k++] = A[i++];
-    while(j<=mid)
+    while(j<=high)
         B[k++] = A[j++];
     for(i=low;i<=high;i++){
         A[i] = B[i];
-        printf("\n i = %d",i);
     }
 }
 void MergeSort(int A[],int low,int high)
@@ -43,7 +42,10 @@ int main()
     int A[20],min=20,max=100,val,n=15;
     for(int i=0; i<15; i++)
         A[i] = (rand()%(max-min+1)+min);
+    printf("\nBefore Sorting:");
+    Output(A);
     MergeSort(A,0,n-1);
-    // Output(A);
+    printf("\nAfter Sorting:");
+    Output(A);
     return 0;
 }
